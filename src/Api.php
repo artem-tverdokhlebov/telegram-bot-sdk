@@ -559,6 +559,11 @@ class Api
         return $this->post('editMessageReplyMarkup', $params);
     }
 
+    public function editMessageText($params)
+    {
+        return $this->post('editMessageText', $params);
+    }
+
     public function deleteMessage($params)
     {
         return $this->post('deleteMessage', $params);
