@@ -20,6 +20,7 @@ class Update extends BaseObject
         return [
             'message' => Message::class,
             'callback_query' => CallbackQuery::class,
+            'inline_query' => InlineQuery::class
         ];
     }
 

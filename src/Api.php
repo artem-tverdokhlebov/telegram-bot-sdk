@@ -579,6 +579,10 @@ class Api
         return $this->post('getWebhookInfo');
     }
 
+    public function answerInlineQuery($params) {
+        return $this->post('answerInlineQuery', $params);
+    }
+
     /**
      * Broadcast a Chat Action.
      *
