@@ -33,6 +33,7 @@ namespace Telegram\Bot\Objects;
  * @method bool             getChannelChatCreated()     (Optional). Service message: the channel has been created.
  * @method int              getMigrateToChatId()        (Optional). The group has been migrated to a supergroup with the specified identifier, not exceeding 1e13 by absolute value.
  * @method int              getMigrateFromChatId()      (Optional). The supergroup has been migrated from a group with the specified identifier, not exceeding 1e13 by absolute value.
+ * @method MessageEntity[]  getEntities()
  */
 class Message extends BaseObject
 {
@@ -57,6 +58,7 @@ class Message extends BaseObject
             'new_chat_participant'  => User::class,
             'left_chat_participant' => User::class,
             'new_chat_photo'        => PhotoSize::class,
+            'entities'              => MessageEntity::class
         ];
     }
 }
