@@ -22,7 +22,7 @@ class Update extends BaseObject
             'message'        => Message::class,
             'callback_query' => CallbackQuery::class,
             'inline_query'   => InlineQuery::class,
-            'poll'           => Poll::class
+            'poll'           => Poll::class,
         ];
     }
 
