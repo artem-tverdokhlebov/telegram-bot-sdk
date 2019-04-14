@@ -62,6 +62,7 @@ class Message extends BaseObject
             'left_chat_participant' => User::class,
             'new_chat_photo'        => PhotoSize::class,
             'entities'              => MessageEntity::class,
+            'poll'                  => Poll::class
         ];
     }
 }
