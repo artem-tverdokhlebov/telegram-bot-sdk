@@ -6,20 +6,20 @@ namespace Telegram\Bot\Objects;
  * Class MessageEntity.
  *
  * @method string       getType()
- * @method integer      getOffset()
- * @method integer      getLength()
+ * @method int      getOffset()
+ * @method int      getLength()
  * @method string       getUrl()
  * @method User         getUser()
  */
 class MessageEntity extends BaseObject
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function relations()
     {
         return [
-            'user' => User::class
+            'user' => User::class,
         ];
     }
 }
