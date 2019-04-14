@@ -14,12 +14,12 @@ namespace Telegram\Bot\Objects;
 class InlineQuery extends BaseObject
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function relations()
     {
         return [
-            'from' => User::class,
+            'from'     => User::class,
             'location' => Location::class,
         ];
     }

@@ -61,7 +61,7 @@ class Message extends BaseObject
             'new_chat_participant'  => User::class,
             'left_chat_participant' => User::class,
             'new_chat_photo'        => PhotoSize::class,
-            'entities'              => MessageEntity::class
+            'entities'              => MessageEntity::class,
         ];
     }
 }

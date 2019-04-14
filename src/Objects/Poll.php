@@ -19,7 +19,7 @@ class Poll extends BaseObject
     public function relations()
     {
         return [
-            'options' => PollOption::class
+            'options' => PollOption::class,
         ];
     }
 }
