@@ -11,6 +11,9 @@ namespace Telegram\Bot\Objects;
  * @method int              getDate()                   Date the message was sent in Unix time.
  * @method Chat             getChat()                   Conversation the message belongs to.
  * @method User             getForwardFrom()            (Optional). For forwarded messages, sender of the original message.
+ * @method int  getForwardFromMessageId()   (Optional). For messages forwarded from channels, identifier of the original message in the channel
+ * @method string  getForwardSignature()   (Optional). For messages forwarded from channels, signature of the post author if present
+ * @method string  getForwardSenderName()   (Optional). Sender's name for messages forwarded from users who disallow adding a link to their account in forwarded messages
  * @method int              getForwardDate()            (Optional). For forwarded messages, date the original message was sent in Unix time.
  * @method Message          getReplyToMessage()         (Optional). For replies, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.
  * @method string           getText()                   (Optional). For text messages, the actual UTF-8 text of the message.

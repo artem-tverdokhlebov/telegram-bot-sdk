@@ -23,7 +23,7 @@ class Api
     /**
      * @var string Version number of the Telegram Bot PHP SDK.
      */
-    const VERSION = '2.0.0';
+    const VERSION = '1.0.0';
 
     /**
      * @var string The name of the environment variable that contains the Telegram Bot API Access Token.
@@ -581,6 +581,19 @@ class Api
 
     public function answerInlineQuery($params) {
         return $this->post('answerInlineQuery', $params);
+    }
+
+
+    public function sendPoll($params) {
+        $response = $this->post('sendPoll', $params);
+
+        return new Message($response->getDecodedBody());
+    }
+
+    public function stopPoll($params) {
+        $response = $this->post('stopPoll', $params);
+
+        return new Poll($response->getDecodedBody());
     }
 
     /**
