@@ -47,15 +47,15 @@ class Message extends BaseObject
     public function relations()
     {
         return [
-            'chat'                  => Chat::class,
-            'from'                  => User::class,
-            'forward_from'          => User::class,
-            'forward_from_chat'          => Chat::class,
-            'reply_to_message'      => self::class,
-            'entities'              => MessageEntity::class,
+            'chat'                          => Chat::class,
+            'from'                          => User::class,
+            'forward_from'                  => User::class,
+            'forward_from_chat'             => Chat::class,
+            'reply_to_message'              => self::class,
+            'entities'                      => MessageEntity::class,
             'caption_entities'              => MessageEntity::class,
-            'audio'                 => Audio::class,
-            'document'              => Document::class,
+            'audio'                         => Audio::class,
+            'document'                      => Document::class,
             //animation
             //game
             'photo'                 => PhotoSize::class,
@@ -67,10 +67,10 @@ class Message extends BaseObject
             'location'              => Location::class,
             //venue
             'poll'                  => Poll::class,
-            'new_chat_members'  => User::class,
-            'left_chat_member' => User::class,
+            'new_chat_members'      => User::class,
+            'left_chat_member'      => User::class,
             'new_chat_photo'        => PhotoSize::class,
-            'pinned_message' => Message::class,
+            'pinned_message'        => self::class,
             //invoice
             //successful_payment
             //passport_data
