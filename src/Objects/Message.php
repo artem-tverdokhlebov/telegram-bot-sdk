@@ -26,8 +26,8 @@ namespace Telegram\Bot\Objects;
  * @method string           getCaption()                (Optional). Caption for the photo or video contact.
  * @method Contact          getContact()                (Optional). Message is a shared contact, information about the contact.
  * @method Location         getLocation()               (Optional). Message is a shared location, information about the location.
- * @method User             getNewChatParticipant()     (Optional). A new member was added to the group, information about them (this member may be the bot itself).
- * @method User             getLeftChatParticipant()    (Optional). A member was removed from the group, information about them (this member may be the bot itself).
+ * @method User[]             getNewChatMembers()     (Optional). A new member was added to the group, information about them (this member may be the bot itself).
+ * @method User             getLeftChatMember()    (Optional). A member was removed from the group, information about them (this member may be the bot itself).
  * @method string           getNewChatTitle()           (Optional). A chat title was changed to this value.
  * @method PhotoSize[]      getNewChatPhoto()           (Optional). A chat photo was change to this value.
  * @method bool             getDeleteChatPhoto()        (Optional). Service message: the chat photo was deleted.
@@ -37,7 +37,6 @@ namespace Telegram\Bot\Objects;
  * @method int              getMigrateToChatId()        (Optional). The group has been migrated to a supergroup with the specified identifier, not exceeding 1e13 by absolute value.
  * @method int              getMigrateFromChatId()      (Optional). The supergroup has been migrated from a group with the specified identifier, not exceeding 1e13 by absolute value.
  * @method MessageEntity[]  getEntities()
- * @method User[]  getNewChatMembers()
  */
 class Message extends BaseObject
 {
