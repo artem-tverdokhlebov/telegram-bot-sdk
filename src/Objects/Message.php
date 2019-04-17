@@ -50,21 +50,30 @@ class Message extends BaseObject
             'chat'                  => Chat::class,
             'from'                  => User::class,
             'forward_from'          => User::class,
+            'forward_from_chat'          => Chat::class,
             'reply_to_message'      => self::class,
+            'entities'              => MessageEntity::class,
+            'caption_entities'              => MessageEntity::class,
             'audio'                 => Audio::class,
             'document'              => Document::class,
+            //animation
+            //game
             'photo'                 => PhotoSize::class,
             'sticker'               => Sticker::class,
             'video'                 => Video::class,
             'voice'                 => Voice::class,
+            //video_note
             'contact'               => Contact::class,
             'location'              => Location::class,
-            'new_chat_participant'  => User::class,
-            'left_chat_participant' => User::class,
-            'new_chat_photo'        => PhotoSize::class,
-            'entities'              => MessageEntity::class,
+            //venue
             'poll'                  => Poll::class,
-            'new_chat_members'      => User::class,
+            'new_chat_members'  => User::class,
+            'left_chat_member' => User::class,
+            'new_chat_photo'        => PhotoSize::class,
+            'pinned_message' => Message::class,
+            //invoice
+            //successful_payment
+            //passport_data
         ];
     }
 }
