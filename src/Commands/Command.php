@@ -2,9 +2,9 @@
 
 namespace Telegram\Bot\Commands;
 
+use Illuminate\Support\Str;
 use Telegram\Bot\Api;
 use Telegram\Bot\Objects\Update;
-use Illuminate\Support\Str;
 
 /**
  * Class Command.

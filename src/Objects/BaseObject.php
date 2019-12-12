@@ -2,8 +2,8 @@
 
 namespace Telegram\Bot\Objects;
 
-use Illuminate\Support\Collection;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 /**
