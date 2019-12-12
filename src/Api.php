@@ -3,6 +3,7 @@
 namespace Telegram\Bot;
 
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Str;
 use Telegram\Bot\Commands\CommandBus;
 use Telegram\Bot\Commands\CommandInterface;
 use Telegram\Bot\Exceptions\TelegramSDKException;
@@ -14,7 +15,6 @@ use Telegram\Bot\Objects\Message;
 use Telegram\Bot\Objects\Update;
 use Telegram\Bot\Objects\User;
 use Telegram\Bot\Objects\UserProfilePhotos;
-use Illuminate\Support\Str;
 
 /**
  * Class Api.
