@@ -3,6 +3,7 @@
 namespace Telegram\Bot;
 
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Str;
 use Telegram\Bot\Commands\CommandBus;
 use Telegram\Bot\Commands\CommandInterface;
 use Telegram\Bot\Exceptions\TelegramSDKException;
@@ -14,7 +15,6 @@ use Telegram\Bot\Objects\Message;
 use Telegram\Bot\Objects\Update;
 use Telegram\Bot\Objects\User;
 use Telegram\Bot\Objects\UserProfilePhotos;
-use Illuminate\Support\Str;
 
 /**
  * Class Api.
@@ -288,14 +288,14 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendmessage
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['text']
-     * @var string     $params ['parse_mode']
-     * @var bool       $params ['disable_web_page_preview']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['text']
+     * @var string     ['parse_mode']
+     * @var bool       ['disable_web_page_preview']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -319,11 +319,11 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#forwardmessage
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var int        $params ['from_chat_id']
-     * @var int        $params ['message_id']
+     * @var int|string ['chat_id']
+     * @var int        ['from_chat_id']
+     * @var int        ['message_id']
      *
      * @return Message
      */
@@ -349,13 +349,13 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendphoto
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['photo']
-     * @var string     $params ['caption']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['photo']
+     * @var string     ['caption']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -381,15 +381,15 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendaudio
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['audio']
-     * @var int        $params ['duration']
-     * @var string     $params ['performer']
-     * @var string     $params ['title']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['audio']
+     * @var int        ['duration']
+     * @var string     ['performer']
+     * @var string     ['title']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -412,12 +412,12 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#senddocument
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['document']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['document']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -440,12 +440,12 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendsticker
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['sticker']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['sticker']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @throws TelegramSDKException
      *
@@ -477,14 +477,14 @@ class Api
      * @see  sendDocument
      * @link https://core.telegram.org/bots/api#sendvideo
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['video']
-     * @var int        $params ['duration']
-     * @var string     $params ['caption']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['video']
+     * @var int        ['duration']
+     * @var string     ['caption']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -508,13 +508,13 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendaudio
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['voice']
-     * @var int        $params ['duration']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var string     ['voice']
+     * @var int        ['duration']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -538,13 +538,13 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendlocation
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var float      $params ['latitude']
-     * @var float      $params ['longitude']
-     * @var int        $params ['reply_to_message_id']
-     * @var string     $params ['reply_markup']
+     * @var int|string ['chat_id']
+     * @var float      ['latitude']
+     * @var float      ['longitude']
+     * @var int        ['reply_to_message_id']
+     * @var string     ['reply_markup']
      *
      * @return Message
      */
@@ -567,10 +567,10 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendchataction
      *
-     * @param array    $params
+     * @param array $params
      *
-     * @var int|string $params ['chat_id']
-     * @var string     $params ['action']
+     * @var int|string ['chat_id']
+     * @var string     ['action']
      *
      * @throws TelegramSDKException
      *
@@ -611,9 +611,9 @@ class Api
      *
      * @param array $params
      *
-     * @var int     $params ['user_id']
-     * @var int     $params ['offset']
-     * @var int     $params ['limit']
+     * @var int ['user_id']
+     * @var int ['offset']
+     * @var int ['limit']
      *
      * @return UserProfilePhotos
      */
@@ -641,7 +641,7 @@ class Api
      *
      * @param array $params
      *
-     * @var string  $params ['file_id']
+     * @var string ['file_id']
      *
      * @return File
      */
@@ -666,9 +666,9 @@ class Api
      *
      * @param array $params
      *
-     * @var string  $params ['url']         HTTPS url to send updates to.
-     * @var string  $params ['certificate'] Upload your public key certificate so that the root certificate in
-     *                                      use can be checked.
+     * @var string ['url']         HTTPS url to send updates to.
+     * @var string ['certificate'] Upload your public key certificate so that the root certificate in
+     *             use can be checked.
      *
      * @throws TelegramSDKException
      *
@@ -727,11 +727,11 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#getupdates
      *
-     * @param array  $params
+     * @param array $params
      *
-     * @var int|null $params ['offset']
-     * @var int|null $params ['limit']
-     * @var int|null $params ['timeout']
+     * @var int|null ['offset']
+     * @var int|null ['limit']
+     * @var int|null ['timeout']
      *
      * @return Update[]
      */
@@ -766,10 +766,10 @@ class Api
      *
      * @param array $params
      *
-     * @var array   $params ['keyboard']
-     * @var bool    $params ['resize_keyboard']
-     * @var bool    $params ['one_time_keyboard']
-     * @var bool    $params ['selective']
+     * @var array ['keyboard']
+     * @var bool  ['resize_keyboard']
+     * @var bool  ['one_time_keyboard']
+     * @var bool  ['selective']
      *
      * @return string
      */
@@ -792,8 +792,8 @@ class Api
      *
      * @param array $params
      *
-     * @var bool    $params ['hide_keyboard']
-     * @var bool    $params ['selective']
+     * @var bool ['hide_keyboard']
+     * @var bool ['selective']
      *
      * @return string
      */
@@ -816,8 +816,8 @@ class Api
      *
      * @param array $params
      *
-     * @var bool    $params ['force_reply']
-     * @var bool    $params ['selective']
+     * @var bool ['force_reply']
+     * @var bool ['selective']
      *
      * @return string
      */
@@ -981,12 +981,12 @@ class Api
 
             if (!is_resource($contents) && $name !== 'url') {
                 $validUrl = filter_var($contents, FILTER_VALIDATE_URL);
-                $contents = (is_file($contents) || $validUrl) ? (new InputFile($contents))->open() : (string)$contents;
+                $contents = (is_file($contents) || $validUrl) ? (new InputFile($contents))->open() : (string) $contents;
             }
 
             $multipart_params[$i]['name'] = $name;
             $multipart_params[$i]['contents'] = $contents;
-            ++$i;
+            $i++;
         }
 
         $response = $this->post($endpoint, $multipart_params, true);
@@ -1092,7 +1092,7 @@ class Api
     /**
      * Check if IoC Container has been set.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasContainer()
     {

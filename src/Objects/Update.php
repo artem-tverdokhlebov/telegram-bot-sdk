@@ -18,7 +18,7 @@ class Update extends BaseObject
     public function relations()
     {
         return [
-            'message' => Message::class,
+            'message'        => Message::class,
             'callback_query' => CallbackQuery::class,
         ];
     }
